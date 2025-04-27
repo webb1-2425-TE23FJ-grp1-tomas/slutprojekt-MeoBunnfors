@@ -3,10 +3,54 @@
 }
 
 body {
-    background-color: rgb(90, 90, 90);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0px;
+}
+
+#Body-Reservations{
+    background: linear-gradient(135deg, #ba8dda, rgb(3, 76, 222));
+}
+
+#Body-Menu {
+    background: linear-gradient(135deg, #dac38d, rgb(222, 3, 3));
+}
+
+#Body-Home {
+    background: linear-gradient(135deg, #50cf9c, rgb(12, 100, 0));
+}
+
+p {
+    line-height: 1.4;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Odysséy-title {
+    background-color: rgb(26, 26, 26);
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 440px;
+    border: 2px, solid;
+    border-color: rgb(255, 255, 255);
+    display: flex;
+
+}
+
+
+.Odysséy-title h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+    text-decoration: underline;
+    margin-left: 40px;
+    position: absolute;
+    top: 20%;
 
 }
 
@@ -26,10 +70,10 @@ body {
     color: white;
     margin-bottom: 20px;
     position: sticky;
-   top: 0%;
-   left: 0%;
-
+    top: 0%;
+    left: 0%;
 }
+
 
 .Header h2 {
     grid-column: 1/ span 1;
@@ -46,6 +90,7 @@ body {
     justify-content: space-around;
     gap: 5px;
 }
+
 
 .Header a {
     display: block;
@@ -64,6 +109,7 @@ body {
     
 }
 
+
 .Header a:hover {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -77,6 +123,12 @@ body {
 }
 
 #Home-bot {
+    background-color: rgb(12, 12, 12);
+    color: #ffffff;
+    border: 3px, solid;
+}
+
+#Reservations-bot {
     background-color: rgb(12, 12, 12);
     color: #ffffff;
     border: 3px, solid;
@@ -103,7 +155,7 @@ body {
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 300px);
 
 }
 
@@ -125,52 +177,56 @@ body {
     box-shadow: 2px 8px 16px #888888;
     border: 0;
     
-   
+}
+
+.Parts h3 {
+    text-decoration: underline;
+    font-size: x-large;
 }
 
 #Home-box-1 {
-    height: 600px;
+    
     background-color: rgb(0, 153, 102);
     grid-column: 1/ span 5;
-    grid-row: 1/ span 4;
+    grid-row: 1/ span 2;
     background-image: url('img/over-view-cut.webp');
     background-size: cover;
-   
-    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 30px
 }
 
 #Home-box-2 {
-    height: 600px;
+    
     background-color: rgb(255, 201, 135);
     grid-column: 6/ span 3;
-    grid-row: 1/ span 4;
+    grid-row: 1/ span 2;
     
 
 }
 
 #Home-box-3 {
-    height: 300px;
+    
     background-color: brown;
     grid-column: 1/ span 3;
-    grid-row: 5/ span 2;
-    margin-top: 0px;
+    grid-row: 3/ span 1;
+    
 }
 
 #Home-box-4 {
-    height: 300px;
+    
     background-color: rgb(82, 20, 255);
     grid-column: 4 / span 5;
-    grid-row: 5/ span 2;
-    margin-top: 0px;
+    grid-row: 3/ span 1;
 }
 
 
 #Home-box-5 {
-    height: 300px;
     background-color: rgb(255, 94, 0);
     grid-column: 1/ span 8;
-    grid-row: 7/ span 2;
-
+    grid-row: 4/ span 1;
 }
 
 .MENU-Face {
@@ -203,9 +259,18 @@ body {
     height: 300px;
     background-color: rgb(255, 255, 255);
     grid-column: 4/ span 5;
-    grid-row: 1;
-    
-    
+    grid-row: 1; 
+    padding: 20px;
+}
+
+#Menu-box-2 p {
+    transition: 0.3s ease; 
+
+}
+
+#Menu-box-2 p:hover {
+    font-size: 16px;
+
 }
 
 #Menu-box-3 {
@@ -214,7 +279,6 @@ body {
     background-image: url(img/Taramosalata.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-   
     
 }
 
@@ -228,7 +292,17 @@ body {
     background-color: rgb(255, 255, 255);
     grid-column: 1/ span 5;
     grid-row: 2;
-    
+    padding: 20px;
+}
+
+#Menu-box-4 p {
+    transition: 0.3s ease; 
+
+}
+
+#Menu-box-4 p:hover {
+    font-size: 16px;
+
 }
 
 #Menu-box-5 {
@@ -251,31 +325,132 @@ body {
     background-color: rgb(255, 255, 255);
     grid-column: 4/ span 5;
     grid-row: 3;
+    padding: 20px;
+}
+
+#Menu-box-6 p {
+    transition: 0.3s ease; 
+
+}
+
+#Menu-box-6 p:hover {
+    font-size: 16px;
+
+}
+
+.Reservations-Face {
+    grid-column: 2/ span 2;
+    min-width: 1200px;
+
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 500px);
+}
+
+.Parts-rese {
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    border: 1px solid;
+    box-shadow: 0px 4px 8px #888888;
+    transition: 0.3s;
+    border: 0;
+}
+
+h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
     
 }
 
-.Odysséy-title {
-    background-color: rgb(26, 26, 26);
-    height: 150px;
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 450px;
-    border: 2px, solid;
-    border-color: rgb(255, 255, 255);
-    position: absolute;
-    margin-top: 4%;
-}
-
-.Odysséy-title h1 {
-    color: white;
+h5 {
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: 100px;
+    font-size: 16px;
+    margin-top: -10px;
+    margin-left: 0px;
+    color: rgb(0, 0, 0);
     text-decoration: underline;
-    margin-left: 40px;
-    position: absolute;
-    margin-top: 2%;
 
 }
+
+.Reservations-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.Reservations-container ul li {
+    list-style: none;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    margin-left: 0px;
+
+}
+
+.checked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#Dinner {
+    grid-column: 1;
+    
+}
+
+#Dinner-date {
+    grid-column: 2;
+    
+}
+
+#Rese-box-1 {
+    grid-column: 1;
+    grid-row: 1;
+    padding-left: 20px;
+}
+
+#Rese-box-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#Rese-box-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#Rese-box-4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#Rese-box-5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#Rese-box-6 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#Rese-box-7 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+
 
 
 
