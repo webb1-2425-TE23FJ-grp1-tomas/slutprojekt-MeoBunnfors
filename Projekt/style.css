@@ -19,12 +19,12 @@ body {
 }
 
 #Body-Home {
-    background: linear-gradient(135deg, #77dfe2, rgb(42, 133, 118));
+    background: linear-gradient(135deg, #ffc7f6, rgb(236, 162, 255));
 }
 
 p {
     line-height: 1.4;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .Odysséy-title {
@@ -68,6 +68,7 @@ p {
     position: sticky;
     top: 0%;
     left: 0%;
+    z-index: 10; /* Ensure the header is above the content */
 }
 
 
@@ -195,10 +196,10 @@ p {
 
 #Home-box-2 {
     
-    background-color: rgb(255, 201, 135);
+    background-color: rgb(255, 255, 255);
     grid-column: 6/ span 3;
     grid-row: 1/ span 2;
-    
+    padding: 30px;
 
 }
 
@@ -367,26 +368,27 @@ p {
 }
 
 .Reservations-Face {
+    /* Removed position: relative;  */
+    z-index: 1; /* Ensure the reservations content is below the header */
     grid-column: 2/ span 2;
     min-width: 1200px;
-
     background-color: #eee;
     border-radius: 10px;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 500px);
+    grid-template-rows: repeat(3, auto); /* Changed to auto to fit content */
+    gap: 10px; /* Added gap for spacing between boxes */
 }
 
 .Parts-rese {
     margin: 10px;
     border-radius: 5px;
     background-color: #ffffff;
-
-    border: 1px solid;
     box-shadow: 0px 4px 8px #888888;
     transition: 0.3s;
     border: 0;
+    padding-bottom: 100px;
 }
 
 h4 {
@@ -395,34 +397,41 @@ h4 {
     padding-left: 30px;
     color: rgb(0, 0, 0);
     text-decoration: underline;
-    
 }
 
 h5 {
     font-weight: bold;
     font-size: 16px;
-    margin-top: -10px;
+    margin-top: 10px;
     margin-left: 0px;
     color: rgb(0, 0, 0);
     text-decoration: underline;
-
 }
 
 .Reservations-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 5px; /* Added gap for spacing between columns */
+    padding-left: 20px;
+}
 
+.Reservations-container ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
 }
 
 .Reservations-container ul li {
-    list-style: none;
     font-size: 12px;
     cursor: pointer;
     position: relative;
     color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-    margin-left: 0px;
+    margin-bottom: 10px; /* Increased margin for better spacing */
 
+}
+
+.Reservations-container ul li input[type="checkbox"] {
+    margin-right: 5px; /* Add space between checkbox and text */
 }
 
 .checked {
@@ -430,20 +439,9 @@ h5 {
     color: gray;
 }
 
-#Dinner {
-    grid-column: 1;
-    
-}
-
-#Dinner-date {
-    grid-column: 2;
-    
-}
-
 #Rese-box-1 {
     grid-column: 1;
     grid-row: 1;
-    padding-left: 20px;
 }
 
 #Rese-box-2 {
