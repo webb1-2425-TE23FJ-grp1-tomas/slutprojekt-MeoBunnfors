@@ -16,7 +16,13 @@
             <h2>Menu</h2>
         </div>
 
-        <ul>
+        <div class="hamburger">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+
+        <ul class="links-menu">
             <li><a href="Home.html">Home</a></li>
             <li><a id="Menu-bot" href="">Menu</a></li>
             <li><a id="Reservations" href="Reservations.html">Reservations</a></li>
@@ -71,9 +77,19 @@
     <script src="simple-lightbox.min.js"></script>
     <script>
         let lightbox = new SimpleLightbox('.MENU-Face a', { /* options */ });
+
+        // JavaScript for hamburger menu functionality
+        const hamburger = document.querySelector(".hamburger");
+        const linksMenu = document.querySelector(".links-menu");
+
+        // Add event listener to the hamburger icon
+        hamburger.addEventListener("click", () => {
+            // Toggle the 'change' class on the hamburger for the 'X' animation
+            hamburger.classList.toggle("change");
+            // Toggle the 'active' class on the navigation links to show/hide the menu
+            linksMenu.classList.toggle("active");
+        });
     </script>
-
-
 </body>
 
 </html>

@@ -4,18 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odysséy</title>
+    <title>Odysséy Reservations</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="Body-Reservations">
-  
+    
     <div class="Header"> 
         <div id="icon-title"><h2>Reservations</h2></div>
             
-        <ul>
-            <li><a  href="Home.html">Home</a></li>
-            <li><a  href="Menu.html">Menu</a></li>
+        <div class="hamburger">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+
+        <ul class="links-menu">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Menu.html">Menu</a></li>
             <li><a id="Reservations-bot" href="">Reservations</a></li>
         </ul>
     </div>
@@ -346,6 +352,18 @@
         </div>
     </div>
 <Script src="Skript.js"></Script>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const linksMenu = document.querySelector(".links-menu");
+
+    // Add event listener to the hamburger icon
+    hamburger.addEventListener("click", () => {
+        // Toggle the 'change' class on the hamburger for the 'X' animation
+        hamburger.classList.toggle("change");
+        // Toggle the 'active' class on the navigation links to show/hide the menu
+        linksMenu.classList.toggle("active");
+    });
+</script>
 
 </body>
 
