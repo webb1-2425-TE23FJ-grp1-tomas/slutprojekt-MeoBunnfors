@@ -1,4 +1,4 @@
-/* Base styles */
+
 * {
     box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#Body-Reservations{
+#Body-Reservations {
     background: linear-gradient(135deg, #ba8dda, rgb(3, 76, 222));
 }
 
@@ -20,10 +20,10 @@ body {
 }
 
 #Body-Home {
-    background : linear-gradient(135deg, #cde1f8, rgb(77, 140, 235));
+    background: linear-gradient(135deg, #cde1f8, rgb(77, 140, 235));
 }
 
-p {     
+p {
     line-height: 1.4;
     font-size: 14px;
 }
@@ -68,19 +68,19 @@ h5 {
 .Header {
     width: 100%;
     height: 150px;
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 20px;
     background-color: rgb(26, 26, 26);
     color: white;
     margin-bottom: 20px;
-    position: relative; 
-    z-index: 10; 
+    position: relative;
+    z-index: 10;
 }
 
 .Header h2 {
-    margin-left: 0; 
+    margin-left: 0;
 }
 
 
@@ -96,13 +96,13 @@ h5 {
 .Header a {
     display: block;
     background-color: rgb(26, 26, 26);
-    padding: 10px 20px; 
-    border: 1px, solid; 
+    padding: 10px 20px;
+    border: 1px, solid;
     border-color: rgb(255, 255, 255);
-    border-radius: 5px; 
-    cursor: pointer; 
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -144,31 +144,33 @@ h5 {
 
 
 .hamburger {
-    display: none; 
+    display: none;
     cursor: pointer;
-    z-index: 20; 
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     margin: 5px 0;
-    transition: 0.4s; 
-    border-radius: 9999px; 
+    transition: 0.4s;
+    border-radius: 9999px;
 }
 
 
 .change .bar1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .change .bar2 {
-    opacity: 0; 
+    opacity: 0;
 }
+
 .change .bar3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
@@ -194,7 +196,7 @@ h5 {
     border: 0;
 }
 
-.Parts:hover{
+.Parts:hover {
     border: 1px solid;
     padding: 10px;
     box-shadow: 2px 8px 16px #888888;
@@ -256,23 +258,23 @@ h5 {
     padding: 50px;
 }
 
-#Home-box-5 img{
+#Home-box-5 img {
     object-fit: contain;
 }
 
-#icon-contact-1{
+#icon-contact-1 {
     grid-column: 1;
 }
 
-#icon-contact-2{
+#icon-contact-2 {
     grid-column: 2;
 }
 
-#icon-contact-3{
+#icon-contact-3 {
     grid-column: 3;
 }
 
-.img-icon{
+.img-icon {
     height: 70px;
 }
 
@@ -284,16 +286,37 @@ h5 {
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
 }
 
-#Menu-box-1 {
-    min-height: 300px;
-    background-color: brown;
-    background-image: url(img/Souvlaki.webp);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+
+.Menu-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 200px;
 }
+
+.Menu-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+
+#Menu-box-2,
+#Menu-box-4,
+#Menu-box-6,
+#Menu-box-8 {
+    min-height: 200px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
 
 #Menu-img-1 {
     grid-column: 1/ span 3;
@@ -301,27 +324,8 @@ h5 {
 }
 
 #Menu-box-2 {
-    min-height: 300px;
-    background-color: rgb(255, 255, 255);
     grid-column: 4/ span 5;
-    grid-row: 1; 
-    padding: 20px;
-}
-
-#Menu-box-2 p {
-    transition: 0.3s ease; 
-}
-
-#Menu-box-2 p:hover {
-    font-size: 16px;
-}
-
-#Menu-box-3 {
-    min-height: 300px;
-    background-color: brown;
-    background-image: url(img/Taramosalata.webp);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    grid-row: 1;
 }
 
 #Menu-img-3 {
@@ -330,27 +334,8 @@ h5 {
 }
 
 #Menu-box-4 {
-    min-height: 300px;
-    background-color: rgb(255, 255, 255);
     grid-column: 1/ span 5;
     grid-row: 2;
-    padding: 20px;
-}
-
-#Menu-box-4 p {
-    transition: 0.3s ease; 
-}
-
-#Menu-box-4 p:hover {
-    font-size: 16px;
-}
-
-#Menu-box-5 {
-    min-height: 300px;
-    background-color: brown;
-    background-image: url(img/Keftedes.webp);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
 }
 
 #Menu-img-5 {
@@ -359,27 +344,8 @@ h5 {
 }
 
 #Menu-box-6 {
-    min-height: 300px;
-    background-color: rgb(255, 255, 255);
     grid-column: 4/ span 5;
     grid-row: 3;
-    padding: 20px;
-}
-
-#Menu-box-6 p {
-    transition: 0.3s ease; 
-}
-
-#Menu-box-6 p:hover {
-    font-size: 16px;
-}
-
-#Menu-box-7 {
-    min-height: 300px;
-    background-color: brown;
-    background-image: url(img/top\ view\ greekfood.webp);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
 }
 
 #Menu-img-7 {
@@ -388,32 +354,37 @@ h5 {
 }
 
 #Menu-box-8 {
-    min-height: 300px;
-    background-color: rgb(255, 255, 255);
     grid-column: 1/ span 5;
     grid-row: 4;
-    padding: 20px;
 }
 
+#Menu-box-2 p,
+#Menu-box-4 p,
+#Menu-box-6 p,
 #Menu-box-8 p {
-    transition: 0.3s ease; 
+    transition: 0.3s ease;
 }
 
+#Menu-box-2 p:hover,
+#Menu-box-4 p:hover,
+#Menu-box-6 p:hover,
 #Menu-box-8 p:hover {
     font-size: 16px;
 }
 
+
+
 /* Reservations-Face styles */
 .Reservations-Face {
-    z-index: 1; 
+    z-index: 1;
     max-width: 1200px;
     background-color: #eee;
     border-radius: 10px;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto); 
-    gap: 10px; 
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
 }
 
 .Parts-rese {
@@ -429,7 +400,7 @@ h5 {
 .Reservations-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5px; 
+    gap: 5px;
     padding-left: 20px;
 }
 
@@ -444,11 +415,11 @@ h5 {
     cursor: pointer;
     position: relative;
     color: rgb(0, 0, 0);
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .Reservations-container ul li input[type="checkbox"] {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .checked {
@@ -512,64 +483,67 @@ h5 {
     .Header {
         width: 100%;
         height: 150px;
-        display: flex; 
-        justify-content: space-between; 
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        padding: 0 20px; 
+        padding: 0 20px;
         background-color: rgb(26, 26, 26);
         color: white;
         margin-bottom: 20px;
-        position: relative; 
-        z-index: 10; 
+        position: relative;
+        z-index: 10;
     }
 
     .Header h2 {
-        margin-left: 0; 
+        margin-left: 0;
     }
 
-    
+
     .links-menu {
-        display: none; 
+        display: none;
     }
 
-    
+
     .hamburger {
-        display: block; 
+        display: block;
         position: absolute;
-        right: 20px; 
-        left: auto; 
-        top: 50%; 
-        transform: translateY(-50%); 
+        right: 20px;
+        left: auto;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 20;
     }
 
-    
+
     .links-menu.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 100%; 
-        right: 0; 
-        left: auto; 
+        top: 100%;
+        right: 0;
+        left: auto;
         width: 100%;
-        background-color: rgb(26, 26, 26); 
+        background-color: rgb(26, 26, 26);
         padding-bottom: 16px;
-        z-index: 9; 
-        border-radius: 0 0 8px 8px; 
+        z-index: 9;
+        border-radius: 0 0 8px 8px;
         margin-top: 0;
     }
+
     .links-menu.active li {
-        margin: 12px 0; 
+        margin: 12px 0;
     }
+
     .links-menu.active a {
-        font-size: 18px; 
+        font-size: 18px;
         padding: 8px 16px;
-        border-radius: 6px; 
+        border-radius: 6px;
         transition: background-color 0.2s ease-in-out;
-        color: white; 
-        font-size: 20px; 
+        color: white;
+        font-size: 20px;
     }
+
     .links-menu.active a:hover {
         background-color: #ffffff;
         color: rgb(0, 0, 0);
@@ -642,202 +616,195 @@ h5 {
         padding: 50px;
     }
 
-    #Home-box-5 img{
+    #Home-box-5 img {
         object-fit: contain;
     }
 
-    #icon-contact-1{
+    #icon-contact-1 {
         grid-column: 1;
         grid-row: 1;
     }
 
-    #icon-contact-2{
+    #icon-contact-2 {
         grid-column: 2;
         grid-row: 1;
     }
 
-    #icon-contact-3{
+    #icon-contact-3 {
         grid-column: 1;
         grid-row: 2;
     }
 
-    .img-icon{
+    .img-icon {
         height: 100px;
     }
 
     /*Menu css*/
 
-.MENU-Face {
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
+    .MENU-Face {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
 
-#Menu-img-1 {
-    grid-column: 1/ span 4;
-    grid-row: 1;
-}
+    .Menu-image-container {
+        min-height: 150px;
+    }
 
-#Menu-box-2 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 5/ span 4;
-    grid-row: 1; 
-    padding: 20px;
-}
+    #Menu-img-1 {
+        grid-column: 1/ span 4;
+        grid-row: 1;
+    }
 
-#Menu-img-3 {
-    grid-column: 5/ span 4;
-    grid-row: 2;
-}
+    #Menu-box-2 {
+        grid-column: 5/ span 4;
+        grid-row: 1;
+    }
 
-#Menu-box-4 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 1/ span 4;
-    grid-row: 2;
-    padding: 20px;
-}
+    #Menu-img-3 {
+        grid-column: 5/ span 4;
+        grid-row: 2;
+    }
 
-#Menu-img-5 {
-    grid-column: 1/ span 4;
-    grid-row: 3;
-}
+    #Menu-box-4 {
+        grid-column: 1/ span 4;
+        grid-row: 2;
+    }
 
-#Menu-box-6 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 5/ span 4;
-    grid-row: 3;
-    padding: 20px;
-}
+    #Menu-img-5 {
+        grid-column: 1/ span 4;
+        grid-row: 3;
+    }
 
-#Menu-img-7 {
-    grid-column: 5/ span 4;
-    grid-row: 4;
-}
+    #Menu-box-6 {
+        grid-column: 5/ span 4;
+        grid-row: 3;
+    }
 
-#Menu-box-8 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 1/ span 4;
-    grid-row: 4;
-    padding: 20px;
-}
+    #Menu-img-7 {
+        grid-column: 5/ span 4;
+        grid-row: 4;
+    }
+
+    #Menu-box-8 {
+        grid-column: 1/ span 4;
+        grid-row: 4;
+    }
 
 
     /*Resrvations css*/
-    .Reservations-Face{
+    .Reservations-Face {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, auto); 
+        grid-template-rows: repeat(4, auto);
     }
 
     #Rese-box-1 {
-    grid-column: 1;
-    grid-row: 1;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #Rese-box-2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #Rese-box-3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #Rese-box-4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #Rese-box-5 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #Rese-box-6 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #Rese-box-7 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    h4 {
+        font-size: 18px;
+
+    }
+
+    h5 {
+        font-size: 12px;
+
+    }
+
+    .Reservations-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding-left: 20px;
+    }
+
+
 }
 
-#Rese-box-2 {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-#Rese-box-3 {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-#Rese-box-4 {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-#Rese-box-5 {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#Rese-box-6 {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-#Rese-box-7 {
-    grid-column: 1;
-    grid-row: 4;
-}
-
-h4{
-    font-size: 18px;
-
-}
-
-h5{
-    font-size: 12px;
-
-}
-
-.Reservations-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 5px; 
-    padding-left: 20px;
-}
-
-
-}
-
-@media screen and (max-width: 550px){
+@media screen and (max-width: 550px) {
 
     .icon-title {
-    margin-left: 30px;
-    font-size: 24px;
-}
+        margin-left: 30px;
+        font-size: 24px;
+    }
+
     .Odysséy-title {
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        width: 80%; 
-        max-width: 800px; 
-        height: 10vh; 
-        background-color: rgb(26, 26, 26); 
-        color: #ffffff; 
-        font-size: 48px; 
-        font-weight: 800; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        max-width: 800px;
+        height: 10vh;
+        background-color: rgb(26, 26, 26);
+        color: #ffffff;
+        font-size: 48px;
+        font-weight: 800;
         text-align: center;
-        padding: 16px; 
+        padding: 16px;
     }
 
     .Odysséy-title h1 {
-        margin: 0; 
-        width: 100%; 
-        height: 100%; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        font-size: 42px; 
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 42px;
     }
 
-   
+
     .Header {
-        height: 100px; 
+        height: 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
     }
 
-    
+
     .hamburger {
-        right: 20px; 
-        left: auto; 
-        top: 50%; 
+        right: 20px;
+        left: auto;
+        top: 50%;
         /* transform: translateY(-50%); */
         z-index: 50;
     }
-    
-    
+
+
     .links-menu.active {
-        top: 100px; 
+        top: 100px;
     }
 
     .HOME-Face {
@@ -907,127 +874,119 @@ h5{
         padding: 50px;
     }
 
-    #Home-box-5 img{
+    #Home-box-5 img {
         object-fit: contain;
     }
 
-    #icon-contact-1{
+    #icon-contact-1 {
         grid-column: 1;
         grid-row: 1;
     }
 
-    #icon-contact-2{
+    #icon-contact-2 {
         grid-column: 1;
         grid-row: 2;
     }
 
-    #icon-contact-3{
+    #icon-contact-3 {
         grid-column: 1;
         grid-row: 3;
     }
 
-    .img-icon{
+    .img-icon {
         height: 100px;
     }
 
     /*Menu css*/
 
-.MENU-Face {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(8, auto);
-}
-
-#Menu-img-1 {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#Menu-box-2 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 1;
-    grid-row: 2; 
-    padding: 20px;
-}
-
-#Menu-img-3 {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-#Menu-box-4 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 1;
-    grid-row: 4;
-    padding: 20px;
-}
-
-#Menu-img-5 {
-    grid-column: 1;
-    grid-row: 5;
-}
-
-#Menu-box-6 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 1;
-    grid-row: 6;
-    padding: 20px;
-}
-
-#Menu-img-7 {
-    grid-column: 1;
-    grid-row: 7;
-}
-
-#Menu-box-8 {
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    grid-column: 1;
-    grid-row: 8;
-    padding: 20px;
-}
-
-
-     /*Resrvations css*/
-    .Reservations-Face{
+    .MENU-Face {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(7, auto); 
+        grid-template-rows: repeat(8, auto);
+    }
+
+    .Menu-image-container {
+        min-height: 150px;
+    }
+
+    #Menu-img-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #Menu-box-2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #Menu-img-3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #Menu-box-4 {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #Menu-img-5 {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    #Menu-box-6 {
+        grid-column: 1;
+        grid-row: 6;
+    }
+
+    #Menu-img-7 {
+        grid-column: 1;
+        grid-row: 7;
+    }
+
+    #Menu-box-8 {
+        grid-column: 1;
+        grid-row: 8;
+    }
+
+
+    /*Resrvations css*/
+    .Reservations-Face {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(7, auto);
     }
 
     #Rese-box-1 {
-    grid-column: 1;
-    grid-row: 1;
-}
+        grid-column: 1;
+        grid-row: 1;
+    }
 
-#Rese-box-2 {
-    grid-column: 1;
-    grid-row: 2;
-}
+    #Rese-box-2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
 
-#Rese-box-3 {
-    grid-column: 1;
-    grid-row: 3;
-}
+    #Rese-box-3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
 
-#Rese-box-4 {
-    grid-column: 1;
-    grid-row: 4;
-}
+    #Rese-box-4 {
+        grid-column: 1;
+        grid-row: 4;
+    }
 
-#Rese-box-5 {
-    grid-column: 1;
-    grid-row: 5;
-}
+    #Rese-box-5 {
+        grid-column: 1;
+        grid-row: 5;
+    }
 
-#Rese-box-6 {
-    grid-column: 1;
-    grid-row: 6;
-}
+    #Rese-box-6 {
+        grid-column: 1;
+        grid-row: 6;
+    }
 
-#Rese-box-7 {
-    grid-column: 1;
-    grid-row: 7;
-}
+    #Rese-box-7 {
+        grid-column: 1;
+        grid-row: 7;
+    }
 }
