@@ -799,7 +799,7 @@ h5 {
         right: 20px;
         left: auto;
         top: 50%;
-        /* transform: translateY(-50%); */
+        transform: translateY(-50%);
         z-index: 50;
     }
 
